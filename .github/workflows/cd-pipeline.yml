@@ -45,7 +45,7 @@ jobs:
         run: |
           echo "${{ secrets.ANSIBLE_SSH_KEY }}" > ansible_key.pem
           chmod 600 ansible_key.pem
-          ssh -o StrictHostKeyChecking=no -i ansible_key.pem ec2-user@3.254.99.75 <<EOF
+          ssh -o StrictHostKeyChecking=no -i ansible_key.pem ec2-user@52.210.112.125 <<EOF
             aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
             aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
             aws configure set region eu-west-1
